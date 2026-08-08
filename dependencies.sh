@@ -12,7 +12,7 @@ if [ "$NEED_INSTALL" = "1" ]; then
     echo "installing yay..."
     pushd /tmp > /dev/null
     if git clone https://aur.archlinux.org/yay; then
-        cd yay && makepkg -si
+        cd yay && sudo pacman -S base-devel && makepkg -si
     else
         echo "Failed to clone yay repo"
     fi
