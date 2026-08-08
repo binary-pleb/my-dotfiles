@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! command -v yay > /dev/null; then
-	echo "Install yay first!"
+	echo "yay not found! Installing yay..."
     NEED_INSTALL=1
 else 
     echo "Good to go. Execute install.sh"
