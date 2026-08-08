@@ -79,6 +79,9 @@ hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
+for key, delta in pairs({ h = {-10,0}, l = {10,0}, k = {0,-10}, j = {0,10} }) do
+    hl.bind("SUPER + ALT + " .. key, hl.dsp.window.resize({ x = delta[1], y = delta[2], relative = true }), { repeating = true })
+end
 
 
 
