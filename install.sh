@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing required packages..."
-sudo pacman -S --needed base-devel kitty firefox && yay -S --needed hyprland noctalia
+sudo pacman -S --needed nemo ttf-jetbrains-mono-nerd base-devel kitty firefox && yay -S --needed hyprland noctalia
 
 CONFIG_SRC="./hypr"
 CONFIG_DEST="$HOME/.config"
@@ -11,6 +11,7 @@ CONFIG_DEST="$HOME/.config"
 
 echo "Copying dotfiles..."
 rm -rf "$CONFIG_DEST/hypr"
+mkdir -p "$CONFIG_DEST/hypr"
 cp "hypr"/* "$CONFIG_DEST/hypr"
 
 if [ ! -d "$CONFIG_DEST/kitty" ]; then
@@ -18,6 +19,7 @@ if [ ! -d "$CONFIG_DEST/kitty" ]; then
 fi
 
 rm -rf "$CONFIG_DEST/kitty"
+mkdir -p "$CONFIG_DEST/kitty"
 cp "kitty"/* "$CONFIG_DEST/kitty"
 
 echo "Done! Log out and select Hyprland from your display manager or run start-hyprland if you're not using one."
