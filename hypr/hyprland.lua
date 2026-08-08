@@ -27,4 +27,9 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
-
+require("input")
+require("monitors")
+require("look-and-feel")
+require("startup")
+require("workspaces")
+require("noctalia")
