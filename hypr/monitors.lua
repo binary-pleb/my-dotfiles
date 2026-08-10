@@ -5,9 +5,9 @@ hl.monitor({
 	scale = "1",
 })
 
-#########
-# example
-#########
+----------
+-- example
+----------
 
 -- hl.monitor ({
 --     output = "HDMI-A-1"
